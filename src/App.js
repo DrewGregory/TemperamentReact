@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -34,10 +34,26 @@ class App extends Component {
         		</div>
         		<p id="temp_label">40°F</p>
         	</div>
-        		<div className="col-md-4 form-group">
-        				<label className="city-text-input col-form-label">City</label>
-        				<input type="text" value="Los Angeles" className="city-text-input" id="city-text-field" />
-        		</div>
+          <div class="row">
+            <div class="col-md-4" >
+
+            </div>
+        	<div class="col-md-4 form-group">
+        	    <label for="example-text-input" class="city-text-input col-form-label">City</label>
+        	    <input type="text" value="Los Angeles" class="city-text-input" id="city-text-field" />
+        	</div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4" >
+
+            </div>
+        
+              <div class="col-md-4 form-group">
+        	<label for="example-text-input" class="area-text-input col-form-label">Area of House</label>
+        	<input type="text" value="2000" class="area-text-input" id="area-text-field" />
+              </div>
+          </div>
         </div>
 
       </div>

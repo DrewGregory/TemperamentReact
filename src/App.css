@@ -63,3 +63,12 @@
 #city-text-field{
   width:300px;
 }
+
+.area-text-input {
+  position: relative; 
+  left:200px;
+}
+#area-text-field{
+  width:300px;
+}
+
