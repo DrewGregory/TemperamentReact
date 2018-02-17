@@ -1,24 +1,45 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import graph from './graph.js';
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {sliderTop: "620px",
     height: "50px",
-  temperature: 40};
+  temperature: 40,
+  humanSrc: "happyhuman.svg"};
     this.adjustTemperature = this.adjustTemperature.bind(this);
+    this.toggleJacket = this.toggleJacket.bind(this);
   }
 
   adjustTemperature(e) {
     e.persist();
+    var newHumanSrc = "happyhuman.svg";
     let temp = parseInt((660 - e.screenY + 120)/(660-120)*40 + 40);
-    console.log("temperature being adjusted" + e.screenY);
+    if (temp < 68) {
+      newHumanSrc = "sadhuman.svg";
+    }
     this.setState(prevState => ({
       sliderTop: e.screenY - 50 + "px",
       height: 660 - e.screenY + 120 + "px",
-      temperature: temp
+      temperature: temp,
+      humanSrc: newHumanSrc
+    }));
+  }
+
+  toggleJacket(e){
+    e.persist();
+    var newHumanSrc = "humanwithjacket.svg";
+    if (this.state.humanSrc == "humanwithjacket.svg") {
+      if (this.state.temperature < 68) {
+        newHumanSrc = "sadhuman.svg";
+      } else {
+        newHumanSrc = "happyhuman.svg";
+      }
+    }
+    this.setState(prevState => ({
+      humanSrc: newHumanSrc
     }));
   }
 
@@ -46,7 +67,12 @@ class App extends Component {
         		</div>
             <label className="area-text-input col-form-label">Area of House </label>
         	<input type="text" value="2000 ft^2" className="area-text-input" id="area-text-field" />
-        
+          <div id="graph">
+          {graph}
+          </div>
+          <div id="human">
+          <img src={this.state.humanSrc} onClick={this.toggleJacket} alt="Human"/>
+          </div>
       </div>
 
     );
