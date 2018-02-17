@@ -27,11 +27,11 @@ class App extends Component {
        <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Temperament</h1>
+          <h1 className="App-title">Temperament</h1>
         </header>
         <p className="App-intro">
-          To get started, use the thermometer <code>src/App.js</code> to set your
-          temperature.
+        Welcome to Temperament! Input your thermostat settings, square footage, and local area. We will
+        estimate your energy usage and cost.
         </p>
         	<div>
         		<img id="thermo"  src="Thermometer.svg" alt="Thermometer" onClick={this.adjustTemperature}/>
@@ -41,10 +41,14 @@ class App extends Component {
         		<p id="temp_label" style={{top: this.state.sliderTop}}>{this.state.temperature}°F</p>
         	</div>
         		<div className="city-text">
-        				<label className="city-text-input col-form-label">City</label>
+        				<label className="city-text-input col-form-label">City </label>
         				<input type="text" value="Los Angeles" className="city-text-input" id="city-text-field" />
         		</div>
+            <label className="area-text-input col-form-label">Area of House </label>
+        	<input type="text" value="2000 ft^2" className="area-text-input" id="area-text-field" />
+        
       </div>
+
     );
   }
 }
