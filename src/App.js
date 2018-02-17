@@ -40,12 +40,10 @@ class App extends Component {
         		</div>
         		<p id="temp_label" style={{top: this.state.sliderTop}}>{this.state.temperature}°F</p>
         	</div>
-        		<div className="col-md-4 form-group">
+        		<div className="city-text">
         				<label className="city-text-input col-form-label">City</label>
         				<input type="text" value="Los Angeles" className="city-text-input" id="city-text-field" />
         		</div>
-
-
       </div>
     );
   }
