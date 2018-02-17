@@ -3,6 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {sliderTop: "100px"};
+    this.adjustTemperature = this.adjustTemperature.bind(this);
+  }
+
+  adjustTemperature(e) {
+    console.log("temperature being adjusted");
+    this.setState(prevState => ({
+      sliderTop: "200px"
+    }));
+  }
+
   render() {
     return (
        <div className="App">
@@ -14,22 +27,17 @@ class App extends Component {
           To get started, use the thermometer <code>src/App.js</code> to set your
           temperature.
         </p>
-        <div class="container">
+        <div className="container">
         	<div>
-        		<img id="thermo"  src="Thermometer.svg" />
-        		<div id="temperature_slider">
+        		<img id="thermo"  src="Thermometer.svg" alt="Thermometer" onClick={this.adjustTemperature}/>
+        		<div id="temperature_slider" style={{ top: this.context.sliderTop}} onClick={this.adjustTemperature}>
         		</div>
         		<p id="temp_label">40°F</p>
         	</div>
-          <div class="row">
-            <div class="col-md-4" >
-
-            </div>
-        		<div class="col-md-4 form-group">
-        				<label for="example-text-input" class="city-text-input col-form-label">City</label>
-        				<input class="form-control" type="text" value="Los Angeles" class="city-text-input" id="city-text-field" />
+        		<div className="col-md-4 form-group">
+        				<label className="city-text-input col-form-label">City</label>
+        				<input type="text" value="Los Angeles" className="city-text-input" id="city-text-field" />
         		</div>
-        	</div>
         </div>
 
       </div>

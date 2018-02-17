@@ -46,13 +46,13 @@
 }
 #temp_label{
   position: absolute;
-  top: 550px;
+  top: 605px;
 }
 #temperature_slider{
   background-color: #FF0000;
   position: absolute;
-  top: 516px;
-  left: 125px;
+  top: 605px;
+  left: 95px;
   width: 50px;
   height: 50px;
 }
