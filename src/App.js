@@ -45,6 +45,7 @@ class App extends Component {
       this.toggleJacket = this.toggleJacket.bind(this);
       this.asyncGraph = this.asyncGraph.bind(this);
       this.changeArea = this.changeArea.bind(this);
+      this.requestCost = this.requestCost.bind(this);
      }
 
     requestCost(e){
@@ -79,8 +80,6 @@ class App extends Component {
       temperature: temp,
       humanSrc: newHumanSrc
       }));
-      this.requestCost();
-
     }
 
     checkIfSad(src, temp) {
@@ -105,7 +104,6 @@ class App extends Component {
     this.setState(prevState => ({
       area: parseInt(e.target.value)
     }));
-    this.requestCost();
   }
   //This asynchronous rendering is incredibly stupid. There has to be a better way
   asyncGraph(e) {
@@ -147,13 +145,12 @@ class App extends Component {
             <span id="graph_label"> Outside Temperatures in {this.state.selCity}</span>
             {this.state && this.state.data && new Graph(800,400, this.state.data, "#abcdef").graph()}
         </div>
-        <div className="city-text">
+        <div className="city-text form-group">
           <label className="text-input">City </label>
-          <input type="text" value="Los Angeles" value={this.state.selCity} onChange={this.asyncGraph} className="text-input" id="city-text-field" />
-        </div>
-        <div className="form-group">
+          <input type="text" value="Los Angeles" value={this.state.selCity} onChange={this.asyncGraph} id="city-text-field" />
           <label className="text-input">Area of House (ft^2)</label>
-          <input type="number" value={this.state.area} className="text-input form-text" id="area-text-field" onChange={this.changeArea} />
+          <input type="number" value={this.state.area} className="form-text" id="area-text-field" onChange={this.changeArea} />
+          <button id="reqCost" type="submit" onClick={this.requestCost} className="btn btn-primary">Cook the Numbers</button>
         </div>
         <div >
           <img id="human" src={this.state.humanSrc} onClick={this.toggleJacket} alt="Human"/>
@@ -164,8 +161,9 @@ class App extends Component {
         <div id="est_energy" className="badge">
           Estimated Energy: {this.state.energy} kWH/month
         </div>
+
         <span id="credits">
-          Developed by Ryan Tolsma, Daniel Tan, Drew Gregory, and Griffin Kardos. Icon Credits go to Luboš Volkov. Estimated worse case cost.
+          Developed by Ryan Tolsma, Daniel Tan, Drew Gregory, and Griffin Kardos. Icon Credits go to Luboš Volkov. Uses data from the National Reneweable Energy Library, DarkSky, Google Maps, and the U.S. Energy Information Administraiton.
         </span>
        </div>
     );
