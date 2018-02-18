@@ -177,7 +177,7 @@ updateSelCity(e) {
           Estimated Cost: $ {this.state.cost}/month
         </div>
         <div id="est_energy" className="badge">
-          Estimated Energy: {this.state.energy} kWH/month
+          Estimated Energy: {this.state.energy} kWh/month
         </div>
 
         <span id="credits">
