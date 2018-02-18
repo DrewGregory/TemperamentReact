@@ -88,6 +88,7 @@ class App extends Component {
     }
 
 updateSelCity(e) {
+  e.persist();
   this.setState(prevState => ({
     selCity: e.target.value
   }));
@@ -117,13 +118,12 @@ updateSelCity(e) {
       self.setState(prevState =>({
         data: data1,
       })
-      )
-      console.log(data1);
+    );
     });
 
     httpGetAsync("https://tree-hacks.herokuapp.com/api/energydemand/" + self.state.updateSelCity, function(data){
       data = JSON.parse(data);
-      for(var i=0;i<26;i++){
+      for(var i=0;i<25;i++){
         data1.push(
           {
             time : data[i][0],
