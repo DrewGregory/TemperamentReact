@@ -1,3 +1,5 @@
+# Welcome to Temperament!
+To run Temperament, just clone this repository, run `npm install`, and then run `npm start`.
 ## Inspiration
 After looking through TreeHacks' various verticals, we found the Energy vertical to be the most exciting and attractive. We wanted to work on a web app project, particularly focusing on visualizing one's impact on the environment. We hope to make people more metacognitive about their carbon footprint.
 ## What it does
