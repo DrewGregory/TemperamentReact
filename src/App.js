@@ -123,7 +123,7 @@ updateSelCity(e) {
         for(var i=0;i<25;i++){
           data1.push(
             {
-              time : data[i][0],
+              time : data[i][0] + 36600,
               energy : data[i][1],
             }
           );
