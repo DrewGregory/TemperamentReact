@@ -90,11 +90,8 @@ url("mission_gothic/Mission Gothic Bold.otf") format("opentype"),
   position: absolute;
   left:100px;
 }
-#text-field{
-  position:absolute;
-  left:100px;
-  width:300px;
-  background-color: #50a2a7;
+.text-input{
+margin-left: 100px;
 }
 
 .area-text-input {
@@ -135,7 +132,7 @@ url("mission_gothic/Mission Gothic Bold.otf") format("opentype"),
 #credits{
   position: absolute;
   top: 850px;
-  left: 0;
+  left: 5px;
 }
 #est_cost{
   font-size:30pt;
@@ -158,4 +155,8 @@ url("mission_gothic/Mission Gothic Bold.otf") format("opentype"),
   border-style: solid;
   border-color: #000000;
   border-width:thin;
+}
+#reqCost{
+  margin-left: 100px;
+  background-color: #CA0000;
 }

@@ -65,9 +65,14 @@ class App extends Component {
       this.toggleJacket = this.toggleJacket.bind(this);
       this.asyncGraph = this.asyncGraph.bind(this);
       this.changeArea = this.changeArea.bind(this);
-    }
+      this.updateSelCity = this.updateSelCity.bind(this);
+      this.requestCost = this.requestCost.bind(this);
+     }
 
-    requestCost(e){
+
+
+
+  requestCost(e) {
       var xmlHttp = new XMLHttpRequest();
       var self = this;
       xmlHttp.onreadystatechange = function() {
@@ -83,6 +88,7 @@ class App extends Component {
       + this.state.temperature + '/' + this.state.area;
       xmlHttp.open("GET", reqURL,true);
       xmlHttp.send(null);
+      this.asyncGraph();
 
     }
 
@@ -99,8 +105,6 @@ class App extends Component {
       temperature: temp,
       humanSrc: newHumanSrc
       }));
-      this.requestCost();
-
     }
 
     checkIfSad(src, temp) {
@@ -110,6 +114,12 @@ class App extends Component {
       }
       return src;
     }
+
+updateSelCity(e) {
+  this.setState(prevState => ({
+    selCity: e.target.value
+  }));
+}
 
   toggleJacket(e){
     e.persist();
@@ -125,7 +135,6 @@ class App extends Component {
     this.setState(prevState => ({
       area: parseInt(e.target.value)
     }));
-    this.requestCost();
   }
 
   asyncGraph(e) {
@@ -188,13 +197,12 @@ class App extends Component {
             {this.state && this.state.data &&
               new Graph2Y(800,400, this.state.data, "#8b5454", "#00ff00").graph()}
         </div>
-        <div className="city-text">
+        <div className="city-text form-group">
           <label className="text-input">City </label>
-          <input type="text" value="Los Angeles" value={this.state.selCity} onChange={this.asyncGraph} className="text-input" id="city-text-field" />
-        </div>
-        <div className="form-group">
+          <input type="text" value="Los Angeles" value={this.state.selCity} onChange={this.updateSelCity} id="city-text-field" />
           <label className="text-input">Area of House (ft^2)</label>
-          <input type="number" value={this.state.area} className="text-input form-text" id="area-text-field" onChange={this.changeArea} />
+          <input type="number" value={this.state.area} className="form-text" id="area-text-field" onChange={this.changeArea} />
+          <button id="reqCost" type="submit" onClick={this.requestCost} className="btn btn-primary">Cook the Numbers</button>
         </div>
         <div >
           <img id="human" src={this.state.humanSrc} onClick={this.toggleJacket} alt="Human"/>
@@ -205,8 +213,9 @@ class App extends Component {
         <div id="est_energy" className="badge">
           Estimated Energy: {this.state.energy} kWH/month
         </div>
+
         <span id="credits">
-          Developed by Ryan Tolsma, Daniel Tan, Drew Gregory, and Griffin Kardos. Icon Credits go to Luboš Volkov. Estimated worse case cost.
+          Developed by Ryan Tolsma, Daniel Tan, Drew Gregory, and Griffin Kardos. Icon Credits go to Luboš Volkov. Uses data from the National Reneweable Energy Library, DarkSky, Google Maps, and the U.S. Energy Information Administraiton.
         </span>
        </div>
     );
