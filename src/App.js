@@ -43,14 +43,14 @@ class App extends Component {
       this.toggleJacket = this.toggleJacket.bind(this);
       this.asyncGraph = this.asyncGraph.bind(this);
       this.changeArea = this.changeArea.bind(this);
-<<<<<<< HEAD
+
       this.requestCost = this.requestCost.bind(this);
      }
-=======
-    }
->>>>>>> ea1c8a04446dc2240d9dd15ceca8b2ce789957d9
 
-    requestCost(e){
+    
+
+
+  requestCost(e) {
       var xmlHttp = new XMLHttpRequest();
       var self = this;
       xmlHttp.onreadystatechange = function() {
