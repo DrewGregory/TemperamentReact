@@ -64,6 +64,7 @@ class App extends Component {
       + this.state.temperature + '/' + this.state.area;
       xmlHttp.open("GET", reqURL,true);
       xmlHttp.send(null);
+      this.asyncGraph();
 
     }
 
@@ -105,19 +106,21 @@ class App extends Component {
       area: parseInt(e.target.value)
     }));
   }
+
+  updateSelCity(e){
+    this.setState(prevState => ({
+      selCity: e.target.value
+    }));
+  }
   //This asynchronous rendering is incredibly stupid. There has to be a better way
-  asyncGraph(e) {
-    e.persist();
+  asyncGraph() {
       const self = this;
-      httpGetAsync("https://tree-hacks.herokuapp.com/api/weather/" + e.target.value, function(data){
+      httpGetAsync("https://tree-hacks.herokuapp.com/api/weather/" + self.state.selCity, function(data){
         self.setState(prevState =>({
           data: JSON.parse(data)
         })
         )
       });
-      this.setState(prevState => ({
-        selCity: e.target.value
-      }));
   }
 
 
@@ -143,7 +146,7 @@ class App extends Component {
         </div>
         <div id="graph">
             <span id="graph_label"> Outside Temperatures in {this.state.selCity}</span>
-            {this.state && this.state.data && new Graph(800,400, this.state.data, "#abcdef").graph()}
+            {this.state && this.state.data && new Graph(400,400, this.state.data, "#abcdef").graph()}
         </div>
         <div className="city-text form-group">
           <label className="text-input">City </label>
