@@ -32,41 +32,13 @@ class App extends Component {
       selCity: "Los Angeles",
       area: 2000,
       humanSrc: "sadhuman.svg"};
-      let self = this;
-      let data1 = [];
-      httpGetAsync("https://tree-hacks.herokuapp.com/api/weather/" + self.state.selCity, function(data){
-        data1 = data1.concat(JSON.parse(data));
-        for(var i=0; i<data1.length;i++){
-          data1['time']
-        }
-        self.setState(prevState =>({
-          data: data1,
-        })
-        )
-        console.log(data1);
-      });
-
-      httpGetAsync("https://tree-hacks.herokuapp.com/api/energydemand/" + self.state.selCity, function(data){
-        data = JSON.parse(data);
-        for(var i=0;i<26;i++){
-          data1.push(
-            {
-              time : data[i][0] + 8*60*60,
-              energy : data[i][1],
-            }
-          );
-        }
-        self.setState(prevState =>({
-          data: data1,
-          })
-        );
-      });
       this.adjustTemperature = this.adjustTemperature.bind(this);
       this.toggleJacket = this.toggleJacket.bind(this);
       this.asyncGraph = this.asyncGraph.bind(this);
       this.changeArea = this.changeArea.bind(this);
       this.updateSelCity = this.updateSelCity.bind(this);
       this.requestCost = this.requestCost.bind(this);
+      this.asyncGraph();
      }
 
 
@@ -137,11 +109,10 @@ updateSelCity(e) {
     }));
   }
 
-  asyncGraph(e) {
-    e.persist();
+  asyncGraph(){
     const self = this;
     let data1 = [];
-    httpGetAsync("https://tree-hacks.herokuapp.com/api/weather/" + e.target.value, function(data){
+    httpGetAsync("https://tree-hacks.herokuapp.com/api/weather/" + self.state.selCity, function(data){
       data1 = data1.concat(JSON.parse(data));
       self.setState(prevState =>({
         data: data1,
@@ -150,7 +121,7 @@ updateSelCity(e) {
       console.log(data1);
     });
 
-    httpGetAsync("https://tree-hacks.herokuapp.com/api/energydemand/" + e.target.value, function(data){
+    httpGetAsync("https://tree-hacks.herokuapp.com/api/energydemand/" + self.state.updateSelCity, function(data){
       data = JSON.parse(data);
       for(var i=0;i<26;i++){
         data1.push(
@@ -166,9 +137,6 @@ updateSelCity(e) {
       );
     });
 
-    this.setState(prevState => ({
-      selCity: e.target.value
-    }));
   }
 
 
