@@ -2,325 +2,325 @@
     {
         "lat" : 33.4484,
         "lon" : -112.0740,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.AZPS-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.AZPS-ALL.DF.H",
     },
     
     {
         "lat" : 37.163959,
         "lon" : -93.339061,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.AECI-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.AECI-ALL.DF.H",
     },
 
     {
         "lat" : 47.671830,
         "lon" : -117.432757,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.AVA-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.AVA-ALL.DF.H",
     },
 
     {
         "lat" : 38.574592,
         "lon" : -121.481221 ,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.BANC-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.BANC-ALL.DF.H",
     },
 
     {
         "lat" : 45.516610,
         "lon" : -122.671618,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.BPAT-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.BPAT-ALL.DF.H",
     },
 
     {
         "lat" : 38.6780,
         "lon" : -121.1761,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.CISO-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.CISO-ALL.DF.H",
     },
 
     {
         "lat" : 47.249934,
         "lon" : -122.466097,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.TPWR-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.TPWR-ALL.DF.H",
     },
 
     {
         "lat" : 35.229158, 
         "lon" : -80.806536, 
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.DUK-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.DUK-ALL.DF.H",
     },
 
     {
         "lat" : 27.793582,
         "lon" : -82.690193,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.FPC-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.FPC-ALL.DF.H",
     },
 
     {
         "lat" : 35.859548, 
         "lon" : -78.646095,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.CPLE-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.CPLE-ALL.DF.H",
     },
 
     {
         "lat" : 37.220371, 
         "lon" : -88.857478,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.EEI-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.EEI-ALL.DF.H",
     },
 
     {
         "lat" : 31.841747, 
         "lon" : -106.489786,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.EPE-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.EPE-ALL.DF.H",
     },
 
     {
         "lat" : 30.278411, 
         "lon" : -97.708808,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.ERCO-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.ERCO-ALL.DF.H",
     },
 
     {
         "lat" : 28.523336,
         "lon" : -81.377686,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.FMPP-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.FMPP-ALL.DF.H",
     },
 
     {
         "lat" : 28.792230, 
         "lon" : -81.265004,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.FPL-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.FPL-ALL.DF.H",
     },
 
     {
         "lat" : 29.660519, 
         "lon" : -82.346870,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.GVL-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.GVL-ALL.DF.H",
     },
 
     {
         "lat" : 25.455038, 
         "lon" : -80.458172,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.HST-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.HST-ALL.DF.H",
     },
 
     {
         "lat" : 43.599477, 
         "lon" : -116.251415,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.IPCO-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.IPCO-ALL.DF.H",
     },
 
     {
         "lat" : 32.848213, 
         "lon" : -115.568484,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.IID-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.IID-ALL.DF.H",
     },
 
     {
         "lat" : 30.312976,
         "lon" : -81.596744,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.JEA-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.JEA-ALL.DF.H",
     },
 
     {
         "lat" : 38.180376, 
         "lon" : -85.762636,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.LGEE-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.LGEE-ALL.DF.H",
     },
 
     {
         "lat" : 34.028127, 
         "lon" : -118.325250,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.LDWP-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.LDWP-ALL.DF.H",
     },
 
     {
         "lat" : 44.944725, 
         "lon" : -93.100225,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.MISO-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.MISO-ALL.DF.H",
     },
 
     {
         "lat" : 36.121901, 
         "lon" : -115.201815,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.NEVP-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.NEVP-ALL.DF.H",
     },
 
     {
         "lat" : 42.194953, 
         "lon" : -72.627966,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.ISNE-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.ISNE-ALL.DF.H",
     },
 
     {
         "lat" : 29.031641, 
         "lon" : -80.937400,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.NSB-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.NSB-ALL.DF.H",
     },
 
     {
         "lat" : 42.647614, 
         "lon" : -73.707116,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.NYIS-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.NYIS-ALL.DF.H",
     },
 
     {
         "lat" : 43.542192, 
         "lon" : -96.735811,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.NWMT-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.NWMT-ALL.DF.H",
     },
 
     {
         "lat" : 39.063682, 
         "lon" : -83.013278,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.OVEC-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.OVEC-ALL.DF.H",
     },
 
     {
         "lat" : 40.120058, 
         "lon" : -75.340148,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.PJM-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.PJM-ALL.DF.H",
     },
 
     {
         "lat" : 47.712825, 
         "lon" : -119.671608,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.DOPD-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.DOPD-ALL.DF.H",
     },
 
     {
         "lat" : 45.524307, 
         "lon" : -122.627673,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.PACE-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.PACE-ALL.DF.H",
     },
 
     {
         "lat" : 41.164461, 
         "lon" : -112.465265,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.PACW-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.PACW-ALL.DF.H",
     },
 
     {
         "lat" : 31.309644, 
         "lon" : -86.468651,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.AEC-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.AEC-ALL.DF.H",
     },
 
     {
         "lat" : 39.728629, 
         "lon" : -104.961575,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.PSCO-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.PSCO-ALL.DF.H",
     },
 
     {
         "lat" : 35.103999, 
         "lon" : -106.656603,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.PNM-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.PNM-ALL.DF.H",
     },
 
     {
         "lat" : 47.422910, 
         "lon" : -120.326728,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.CHPD-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.CHPD-ALL.DF.H",
     },
 
     {
         "lat" : 47.184167, 
         "lon" : -119.412167,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.GCPD-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.GCPD-ALL.DF.H",
     },
 
     {
         "lat" : 47.595998, 
         "lon" : -122.158858,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.PSEI-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.PSEI-ALL.DF.H",
     },
 
     {
         "lat" : 33.415167, 
         "lon" : -111.926867,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.SRP-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.SRP-ALL.DF.H",
     },
 
     {
         "lat" : 47.583540, 
         "lon" : -122.332623,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.SCL-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.SCL-ALL.DF.H",
     },
 
     {
         "lat" : 28.101308, 
         "lon" : -82.500042,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.SEC-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.SEC-ALL.DF.H",
     },
 
     {
         "lat" : 33.966816, 
         "lon" : -81.065640,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.SCEG-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.SCEG-ALL.DF.H",
     },
 
     {
         "lat" : 33.195200, 
         "lon" : -80.005824,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.SC-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.SC-ALL.DF.H",
     },
 
     {
         "lat" : 33.529777, 
         "lon" : -86.806915,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.SOCO-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.SOCO-ALL.DF.H",
     },
 
     {
         "lat" : 34.748190, 
         "lon" : -92.301669,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.SWPP-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.SWPP-ALL.DF.H",
     },
 
     {
         "lat" : 36.130349, 
         "lon" : -95.902079,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.SPA-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.SPA-ALL.DF.H",
     },
 
     {
         "lat" : 30.465585, 
         "lon" : -84.271628,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.TAL-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.TAL-ALL.DF.H",
     },
 
     {
         "lat" : 27.948716,  
         "lon" : -82.483846,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.TEC-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.TEC-ALL.DF.H",
     },
 
     {
         "lat" : 35.975364, 
         "lon" : -83.949151,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.TVA-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.TVA-ALL.DF.H",
     },
 
     {
         "lat" : 32.165133, 
         "lon" : -110.889994,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.TEPC-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.TEPC-ALL.DF.H",
     },
 
     {
         "lat" : 37.500371, 
         "lon" : -120.839851,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.TIDC-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.TIDC-ALL.DF.H",
     },
 
     {
         "lat" : 40.395244, 
         "lon" : -105.103846,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.WACM-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.WACM-ALL.DF.H",
     },
 
     {
         "lat" : 45.777588, 
         "lon" : -108.539310,
-        "api" : "http://api.eia.gov/series/?api_key=YOUR_API_KEY_HERE&series_id=EBA.WAUW-ALL.DF.H",
+        "api" : "http://api.eia.gov/series/?api_key=55ed7f9d2f8d2c7468f0728f4a3a60d7&series_id=EBA.WAUW-ALL.DF.H",
     },
 
 ]
