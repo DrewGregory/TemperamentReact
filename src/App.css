@@ -10,11 +10,28 @@ src:
 url("bebas_neue/BebasNeue_Bold.otf") format("opentype"),
 url("bebas_neue/TTF/BebasNeue_Bold.ttf") format("truetype"),
 }
+@font-face {
+font-family: "Mission";
+src:
+url("mission_gothic/Mission_Gothic_Regular.otf") format("opentype"),
+}
+@font-face {
+font-family: "Mission_Italic";
+src:
+url("mission_gothic/Mission Gothic Bold Italic.otf") format("opentype"),
+}
+@font-face {
+font-family: "Mission_Bold";
+src:
+url("mission_gothic/Mission Gothic Bold.otf") format("opentype"),
+}
 
 
 .App {
   text-align: center;
-  font-family: "Bebas"
+  font-family: "Mission";
+  background-color: 	#beae7f;
+  height:860px;
 }
 
 .App-logo {
@@ -23,11 +40,14 @@ url("bebas_neue/TTF/BebasNeue_Bold.ttf") format("truetype"),
   top:40px;
   height: 100px;
 }
-
+#subtitle{
+  font-family: "Mission_Italic";
+  font-size: 14pt;
+}
 .App-header {
   background-color: #222;
   height: 150px;
-  font-family: "Bebas_Bold";
+  font-family: "Mission_Italic";
   color: #CA0000;
 }
 
@@ -48,12 +68,6 @@ url("bebas_neue/TTF/BebasNeue_Bold.ttf") format("truetype"),
   width:200px;
   height:600px;
 }
-.container{
-  background-color: #9DA3A4;
-  width: 100%;
-  height: 100vh;
-  padding: 50px;
-}
 .thermo-container {
   width:200px;
   height:600px;
@@ -66,26 +80,29 @@ url("bebas_neue/TTF/BebasNeue_Bold.ttf") format("truetype"),
 #temperature_slider{
   background-color: #FF0000;
   position: absolute;
-  top: 336px;
-  left: 95px;
-  width: 50px;
+  left: 92px;
+  width: 56px;
   height: 50px;
+  transition: top 1s, height 1s;
 }
 .city-text-input {
-  position: relative;
+  background-color: #50a2a7;
+  position: absolute;
   left:100px;
 }
-#city-text-field{
+#text-field{
+  position:absolute;
+  left:100px;
   width:300px;
+  background-color: #50a2a7;
 }
 
 .area-text-input {
-  position: relative;
+  background-color: #50a2a7;
+  position: absolute;
   left:100px;
 }
-#area-text-field{
-  width:300px;
-}
+
 .instructions{
   position:absolute;
   right: 50px;
@@ -94,24 +111,51 @@ url("bebas_neue/TTF/BebasNeue_Bold.ttf") format("truetype"),
   font-size:10pt;
 }
 #graph{
-  position:absolute;
-  right:10px;
-  height:100px;
-  bottom:200px;
+  position: absolute;
+  right:0px;
+  width:800px;
+  top: 400px;
+  background-color: #FFFFFF;
+  border-color:#CA0000;
+  border: 1;
+  border-style: solid;
 }
 #graph_label{
-  width:500px;
   align-content: center;
   text-align: center;
 
 }
 #human{
-  position:absolute;
+  position: absolute;
   left:200px;
+  margin-top: 80px;
   width:200px;
+  height:400px;
 }
 #credits{
   position: absolute;
-  top: 830px;
+  top: 850px;
   left: 0;
+}
+#est_cost{
+  font-size:30pt;
+  margin-left:10vw;
+  margin-top:10px;
+  margin-right:20vw;
+  color:#FFFFFF;
+  background-color: #CA0000;
+  border-style: solid;
+  border-color: #000000;
+  border-width:thin;
+}
+#est_energy {
+  font-size:30pt;
+  margin-left:20vw;
+  margin-top:10px;
+  margin-right:10vw;
+  color:#FFFFFF;
+  background-color: #CA0000;
+  border-style: solid;
+  border-color: #000000;
+  border-width:thin;
 }
