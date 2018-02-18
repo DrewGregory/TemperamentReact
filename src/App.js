@@ -32,22 +32,19 @@ class App extends Component {
       selCity: "Los Angeles",
       area: 2000,
       humanSrc: "sadhuman.svg"};
-      let self = this;
-      httpGetAsync("https://tree-hacks.herokuapp.com/api/weather/" + self.state.selCity, function(data){
-        self.setState(prevState =>({
-          data: JSON.parse(data)
-        })
-        )
-      });
       this.adjustTemperature = this.adjustTemperature.bind(this);
       this.toggleJacket = this.toggleJacket.bind(this);
       this.asyncGraph = this.asyncGraph.bind(this);
       this.changeArea = this.changeArea.bind(this);
       this.requestCost = this.requestCost.bind(this);
+      this.asyncGraph();
      }
 
 
-    requestCost(e){
+
+
+
+  requestCost(e) {
       var xmlHttp = new XMLHttpRequest();
       var self = this;
       xmlHttp.onreadystatechange = function() {
@@ -90,6 +87,12 @@ class App extends Component {
       return src;
     }
 
+updateSelCity(e) {
+  this.setState(prevState => ({
+    selCity: e.target.value
+  }));
+}
+
   toggleJacket(e){
     e.persist();
     var newHumanSrc = this.state.humanSrc.includes("jacket") ? "human.svg" : "humanwithjacket.png";
@@ -106,20 +109,34 @@ class App extends Component {
     }));
   }
 
-  updateSelCity(e){
-    this.setState(prevState => ({
-      selCity: e.target.value
-    }));
-  }
-  //This asynchronous rendering is incredibly stupid. There has to be a better way
-  asyncGraph() {
-      const self = this;
-      httpGetAsync("https://tree-hacks.herokuapp.com/api/weather/" + self.state.selCity, function(data){
-        self.setState(prevState =>({
-          data: JSON.parse(data)
+  asyncGraph(){
+    const self = this;
+    let data1 = [];
+    httpGetAsync("https://tree-hacks.herokuapp.com/api/weather/" + self.state.selCity, function(data){
+      data1 = data1.concat(JSON.parse(data));
+      self.setState(prevState =>({
+        data: data1,
+      })
+      )
+      console.log(data1);
+    });
+
+    httpGetAsync("https://tree-hacks.herokuapp.com/api/energydemand/" + self.state.updateSelCity, function(data){
+      data = JSON.parse(data);
+      for(var i=0;i<26;i++){
+        data1.push(
+          {
+            time : data[i][0],
+            energy : data[i][1],
+          }
+        );
+      }
+      self.setState(prevState =>({
+        data: data1,
         })
-        )
-      });
+      );
+    });
+
   }
 
 
@@ -145,11 +162,12 @@ class App extends Component {
         </div>
         <div id="graph">
             <span id="graph_label"> Outside Temperatures in {this.state.selCity}</span>
-            {this.state && this.state.data && new Graph(800,400, this.state.data, "#8b5454").graph()}
+            {this.state && this.state.data &&
+              new Graph2Y(800,400, this.state.data, "#8b5454", "#00ff00").graph()}
         </div>
         <div className="city-text form-group">
           <label className="text-input">City </label>
-          <input type="text" value="Los Angeles" value={this.state.selCity} onChange={this.asyncGraph} id="city-text-field" />
+          <input type="text" value="Los Angeles" value={this.state.selCity} onChange={this.updateSelCity} id="city-text-field" />
           <label className="text-input">Area of House (ft^2)</label>
           <input type="number" value={this.state.area} className="form-text" id="area-text-field" onChange={this.changeArea} />
           <button id="reqCost" type="submit" onClick={this.requestCost} className="btn btn-primary">Cook the Numbers</button>
