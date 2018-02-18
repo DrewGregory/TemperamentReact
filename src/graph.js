@@ -1,4 +1,4 @@
-import { LineChart, Line, XAxis, CartesianGrid, YAxis, Tooltip, Legend } from 'recharts';
+import { LineChart, Line, XAxis, CartesianGrid, YAxis, Tooltip, Legend, Label} from 'recharts';
 import React, { Component } from 'react';
 
 class Graph2Y {
@@ -24,9 +24,15 @@ class Graph {
   constructor(width, height, data, color = '#ff0000') {
     this.g = <LineChart width={width} height={height} data={data}>
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="time" type="number" domain={['auto', 'auto']} />
-      <YAxis type="number" domain={['auto', 'auto']}/>
-      <Line  type='number' dataKey='temperature' stroke={color} animationDuration={300}/>
+      <XAxis dataKey="time" type="category" domain={['auto', 'auto']} >
+      </XAxis>
+      <YAxis type="number" domain={['auto', 'auto']}>
+      <Label angle={270} position='insideLeft' style={{ textAnchor: 'middle' }}>
+        Temperature (°F)
+      </Label>
+
+      </YAxis>
+      <Line  type='monotone' dataKey='temperature' stroke={color} animationDuration={300}/>
       <Tooltip />
       <Legend />
     </LineChart>;

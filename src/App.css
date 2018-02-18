@@ -1,29 +1,44 @@
+@font-face {
+font-family: "Bebas";
+src:
+url("bebas_neue/BebasNeue_Regular.otf") format("opentype"),
+url("bebas_neue/TTF/BebasNeue_Regular.ttf") format("truetype"),
+}
+@font-face {
+font-family: "Bebas_Bold";
+src:
+url("bebas_neue/BebasNeue_Bold.otf") format("opentype"),
+url("bebas_neue/TTF/BebasNeue_Bold.ttf") format("truetype"),
+}
+
+
 .App {
   text-align: center;
+  font-family: "Bebas"
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  position: absolute;
+  left:0;
+  top:40px;
+  height: 100px;
 }
 
 .App-header {
   background-color: #222;
   height: 150px;
-  color: white;
+  font-family: "Bebas_Bold";
+  color: #CA0000;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 6em;
+  color: #CA0000;
 }
 
 .App-intro {
-  font-size: large;
-}
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  font-size: large;
 }
 
 #thermo{
@@ -82,9 +97,21 @@
   position:absolute;
   right:10px;
   height:100px;
+  bottom:200px;
+}
+#graph_label{
+  width:500px;
+  align-content: center;
+  text-align: center;
+
 }
 #human{
   position:absolute;
   left:200px;
   width:200px;
+}
+#credits{
+  position: absolute;
+  top: 830px;
+  left: 0;
 }
