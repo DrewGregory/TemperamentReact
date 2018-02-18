@@ -37,6 +37,7 @@ class App extends Component {
       this.asyncGraph = this.asyncGraph.bind(this);
       this.changeArea = this.changeArea.bind(this);
       this.requestCost = this.requestCost.bind(this);
+      this.updateSelCity = this.updateSelCity.bind(this);
       this.asyncGraph();
      }
 
