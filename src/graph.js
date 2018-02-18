@@ -16,11 +16,11 @@ var moment = require("moment");
 class Graph2Y {
   g;
   constructor(width, height, data, color1 = '#ff0000', color2 = '#0000ff') {
-    console.log(data);
+    console.log("graph "+data);
 
     this.g = <LineChart width={width} height={height} data={data}>
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="time" type="number" domain={[moment(), 'auto']}
+      <XAxis dataKey="time" type="number" domain={['auto', 'auto']}
       tickFormatter = {(unixTime) => moment(unixTime*1000).format('DD HH:mm')}
       >
       </XAxis>
