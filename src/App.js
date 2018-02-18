@@ -33,11 +33,33 @@ class App extends Component {
       area: 2000,
       humanSrc: "sadhuman.svg"};
       let self = this;
+      let data1 = [];
       httpGetAsync("https://tree-hacks.herokuapp.com/api/weather/" + self.state.selCity, function(data){
+        data1 = data1.concat(JSON.parse(data));
+        for(var i=0; i<data1.length;i++){
+          data1['time']
+        }
         self.setState(prevState =>({
-          data: JSON.parse(data)
+          data: data1,
         })
         )
+        console.log(data1);
+      });
+
+      httpGetAsync("https://tree-hacks.herokuapp.com/api/energydemand/" + self.state.selCity, function(data){
+        data = JSON.parse(data);
+        for(var i=0;i<26;i++){
+          data1.push(
+            {
+              time : data[i][0] + 8*60*60,
+              energy : data[i][1],
+            }
+          );
+        }
+        self.setState(prevState =>({
+          data: data1,
+          })
+        );
       });
       this.adjustTemperature = this.adjustTemperature.bind(this);
       this.toggleJacket = this.toggleJacket.bind(this);
@@ -108,16 +130,36 @@ class App extends Component {
 
   asyncGraph(e) {
     e.persist();
-      const self = this;
-      httpGetAsync("https://tree-hacks.herokuapp.com/api/weather/" + e.target.value, function(data){
-        self.setState(prevState =>({
-          data: JSON.parse(data)
+    const self = this;
+    let data1 = [];
+    httpGetAsync("https://tree-hacks.herokuapp.com/api/weather/" + e.target.value, function(data){
+      data1 = data1.concat(JSON.parse(data));
+      self.setState(prevState =>({
+        data: data1,
+      })
+      )
+      console.log(data1);
+    });
+
+    httpGetAsync("https://tree-hacks.herokuapp.com/api/energydemand/" + e.target.value, function(data){
+      data = JSON.parse(data);
+      for(var i=0;i<26;i++){
+        data1.push(
+          {
+            time : data[i][0],
+            energy : data[i][1],
+          }
+        );
+      }
+      self.setState(prevState =>({
+        data: data1,
         })
-        )
-      });
-      this.setState(prevState => ({
-        selCity: e.target.value
-      }));
+      );
+    });
+
+    this.setState(prevState => ({
+      selCity: e.target.value
+    }));
   }
 
 
@@ -143,7 +185,8 @@ class App extends Component {
         </div>
         <div id="graph">
             <span id="graph_label"> Outside Temperatures in {this.state.selCity}</span>
-            {this.state && this.state.data && new Graph(800,400, this.state.data, "#8b5454").graph()}
+            {this.state && this.state.data &&
+              new Graph2Y(800,400, this.state.data, "#8b5454", "#00ff00").graph()}
         </div>
         <div className="city-text">
           <label className="text-input">City </label>
