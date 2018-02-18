@@ -16,7 +16,7 @@ var moment = require("moment");
 class Graph2Y {
   g;
   constructor(width, height, data, color1 = '#ff0000', color2 = '#0000ff') {
-    console.log("graph "+data);
+    console.log(data);
 
     this.g = <LineChart width={width} height={height} data={data}>
       <CartesianGrid strokeDasharray="3 3" />

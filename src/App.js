@@ -113,30 +113,27 @@ updateSelCity(e) {
   asyncGraph(){
     const self = this;
     let data1 = [];
+
+
     httpGetAsync("https://tree-hacks.herokuapp.com/api/weather/" + self.state.selCity, function(data){
       data1 = data1.concat(JSON.parse(data));
-      self.setState(prevState =>({
-        data: data1,
-      })
-    );
-    });
-
-    httpGetAsync("https://tree-hacks.herokuapp.com/api/energydemand/" + self.state.updateSelCity, function(data){
-      data = JSON.parse(data);
-      for(var i=0;i<25;i++){
-        data1.push(
-          {
-            time : data[i][0],
-            energy : data[i][1],
-          }
+      httpGetAsync("https://tree-hacks.herokuapp.com/api/energydemand/" + self.state.updateSelCity, function(data){
+        data = JSON.parse(data);
+        for(var i=0;i<25;i++){
+          data1.push(
+            {
+              time : data[i][0],
+              energy : data[i][1],
+            }
+          );
+        }
+        self.setState(prevState =>({
+          data: data1,
+          })
         );
-      }
-      self.setState(prevState =>({
-        data: data1,
-        })
-      );
-    });
+      });
 
+    });
   }
 
 
